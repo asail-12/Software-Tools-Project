@@ -3,7 +3,7 @@
 dataset="Interests_Dataset.csv"
 results_file="results.csv"
 
-if [ ! -e "$dataset" ]; then
+if [ ! -f "$dataset" ]; then
   echo "Dataset $dataset not found!"
   exit 1
 fi
