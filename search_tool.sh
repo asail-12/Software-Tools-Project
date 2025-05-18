@@ -1,7 +1,7 @@
 #!/bin/bash
 
 result_file="result.csv"
-# Name of the results file we are searching in                                                                   
+# Name of the results file we are searching in
 
 if [[ ! -f $result_file ]]; then
     echo "Results file not found "
