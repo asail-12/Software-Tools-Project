@@ -1,6 +1,6 @@
 #!/bin/bash
 
-result_file="result.csv"
+result_file="Results.csv"
 # Name of the results file we are searching 
 
 if [[ ! -f $result_file ]]; then
