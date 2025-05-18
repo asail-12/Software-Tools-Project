@@ -1,7 +1,7 @@
 #!/bin/bash
 
 result_file="result.csv"
-# Name of the results file we are searching in
+# Name of the results file we are searching 
 
 if [[ ! -f $result_file ]]; then
     echo "Results file not found "
@@ -19,6 +19,6 @@ read -p "Enter your choice 1/2/3 : " option
 # We ask the user to choose the type of search.
 
 case $option in
-    1) read -p "Enter student name: " name       
-    # If he chooses 1, he will be asked for the student's name. 
+    1) read -p "Enter student name: " name
+    # If he chooses 1, he will be asked for the student's name.
        grep -i "$name" "$result_file";;                                                                                         #Search for the name within the file, ignoring capital or lowercase letters.

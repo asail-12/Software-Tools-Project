@@ -9,7 +9,7 @@ if [[ ! -f $results_file ]]; then
 fi
 # If the file does not exist, we print a message and stop.
 
-read -p "Do you want to secure the results file? yse/no: " answer
+read -p "Do you want to secure the results file? yes/no: " answer
 # We ask the user if he wants to secure the file.
 
 if [[ "$answer" == "yes" || "$answer" == "y" ]]; then
