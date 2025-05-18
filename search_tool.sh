@@ -1,7 +1,7 @@
 #!/bin/bash
 
-result_file="Results.csv"
-# Name of the results file we are searching 
+result_file="results.csv"
+# Name of the results file we are searching
 
 if [[ ! -f $result_file ]]; then
     echo "Results file not found "
@@ -20,5 +20,20 @@ read -p "Enter your choice 1/2/3 : " option
 
 case $option in
     1) read -p "Enter student name: " name
-    # If he chooses 1, he will be asked for the student's name.
+    # If he chooses 1, he will be asked for the student's name. 
        grep -i "$name" "$result_file";;                                                                                         #Search for the name within the file, ignoring capital or lowercase letters.
+
+    2) read -p "Enter major name: " major
+    # If he chooses 2, he is asked for the name of his expected major. 
+       grep -i "$major" "$result_file";;
+    # Looking for a major in the file
+
+    3) read -p "Enter date: " date
+    # If he chooses 3, he is asked for the date.
+       grep -i "$date" "$result_file";;
+    # Looking for the date in the file
+
+    *) echo "Invalid choice";;
+    # Any option other than 1, 2 or 3 is considered invalid.
+
+esac
