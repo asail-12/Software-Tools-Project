@@ -17,6 +17,8 @@ read name
 # Read the first line (headers) from the dataset
 first_line=$(head -n 1 "$dataset")
 IFS=',' read -r -a all_columns <<< "$first_line"
+
+# Extract interest columns (excluding the first column)
 interests=("${all_columns[@]:1}")
 
 # Collect user's answers
